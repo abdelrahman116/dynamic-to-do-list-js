@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const taskList = document.getElementById("task-list");
   const taskInput = document.getElementById("task-input"); // ✅ store the element
   function getName() {
-    return taskInput.value;
+    return taskInput;
   }
 
   function addTask() {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     task.textContent = taskText;
 
     const remove = document.createElement("button");
-    remove.className = "remove-btn";
+    remove.classList.add("remove-btn");
     remove.textContent = "Remove";
     remove.onclick = function () {
       task.remove();
